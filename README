@@ -34,7 +34,7 @@ cd vuln-scanner
 
 Install dependencies:
 
-npm install
+npm install axios
 
 🛠️ Usage
 
@@ -57,4 +57,5 @@ Output example (saved in scan-report.json):
 🔒 Disclaimer
 
 This tool is for educational & ethical purposes only.
+
 ⚠️ Do not scan websites without proper authorization.
