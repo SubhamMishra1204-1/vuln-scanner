@@ -1,0 +1,26 @@
+{
+  "xss": [
+    {
+      "payload": "<script>alert(1)</script>",
+      "error": "Request failed with status code 500"
+    },
+    {
+      "payload": "'\"><img src=x onerror=alert(1)>",
+      "error": "incorrect header check"
+    }
+  ],
+  "sqli": [
+    {
+      "payload": "' OR '1'='1",
+      "vulnerable": false
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "vulnerable": false
+    },
+    {
+      "payload": "' UNION SELECT null, null, null--",
+      "vulnerable": false
+    }
+  ]
+}

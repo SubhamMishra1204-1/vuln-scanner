@@ -1,0 +1,60 @@
+🔎 Web Application Vulnerability Scanner (Node.js)
+
+A lightweight backend-only vulnerability scanner built with Node.js.
+It scans target web applications for common vulnerabilities like Cross-Site Scripting (XSS) and SQL Injection (SQLi), then generates a JSON report.
+
+🚀 Features
+
+✅ Detects XSS vulnerabilities with common payloads
+
+✅ Detects SQL Injection with test payloads
+
+✅ Automated scanning via CLI
+
+✅ Generates detailed scan-report.json
+
+✅ Simple & extensible design (easy to add new tests)
+
+📂 Project Structure
+vuln-scanner/
+│── package.json        # Node project config
+│── vulnerability-scanner.js   # Main scanner script
+│── scan-report.json    # Auto-generated report (after scan)
+
+⚡ Installation
+
+Install Node.js
+ (LTS recommended).
+
+Clone the repo:
+
+git clone https://github.com/your-username/vuln-scanner.git
+cd vuln-scanner
+
+
+Install dependencies:
+
+npm install
+
+🛠️ Usage
+
+Run the scanner on a target URL:
+
+node vulnerability-scanner.js http://example.com/search
+
+
+Output example (saved in scan-report.json):
+
+{
+  "xss": [
+    { "payload": "<script>alert(1)</script>", "vulnerable": false }
+  ],
+  "sqli": [
+    { "payload": "' OR '1'='1", "vulnerable": true }
+  ]
+}
+
+🔒 Disclaimer
+
+This tool is for educational & ethical purposes only.
+⚠️ Do not scan websites without proper authorization.
